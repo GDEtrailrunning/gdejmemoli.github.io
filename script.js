@@ -107,8 +107,9 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 1").appendChild(video2);
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
+  
+  
   const audios = document.querySelectorAll("audio");
-
   audios.forEach(audio => {
     audio.addEventListener("play", () => {
       audios.forEach(otherAudio => {
