@@ -25,7 +25,10 @@ const dataLine2 = {
 };
 
 // Configuración del gráfico de líneas
-const configLine = {
+
+
+// Seleccione los contextos de los <canvas> y cree los gráficos
+const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
   type: 'line',
   data: dataLine1, // Puede cambiar esto a dataLine2 para mostrar el gráfico de la segunda sección
   options: {
@@ -35,11 +38,9 @@ const configLine = {
       }
     }
   }
-};
+});
 
-// Seleccione los contextos de los <canvas> y cree los gráficos
-const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), configLine);
-const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
+ const myChartLine2 = new Chart(document.getElementById('myChart-line-2'), {
   type: 'line',
   data: dataLine2,
   options: {
@@ -107,9 +108,8 @@ function actualizarDiasRestantes() {
   document.getElementById("Semana 1").appendChild(video2);
   document.getElementById("Semana 2").appendChild(video3);
   document.getElementById("Semana 2").appendChild(video4);
-  
-  
-  const audios = document.querySelectorAll("audio");
+
+
   audios.forEach(audio => {
     audio.addEventListener("play", () => {
       audios.forEach(otherAudio => {
@@ -117,6 +117,10 @@ function actualizarDiasRestantes() {
           otherAudio.pause();
         }
       });
+    });
+  });
+  
+});
     });
   });
 
