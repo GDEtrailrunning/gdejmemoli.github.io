@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
 const dataLine1 = {
   labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 29',
-    data: [10, 13, 16, 15], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 31',
+    data: [18, 12, 14, 28], // Datos de los km recorridos en cada día
     borderColor: 'rgba(75, 192, 192, 1)',
     fill: true,
     tension: 0.1
@@ -16,8 +16,8 @@ const dataLine1 = {
 const dataLine2 = {
   labels: ['Día 1', 'Día 2', 'Día 3', 'Día 4'], // Etiquetas de los días
   datasets: [{
-    label: 'Km recorridos en Semana 30',
-    data: [13, 14, 13, 35], // Datos de los km recorridos en cada día
+    label: 'Km recorridos en Semana 32',
+    data: [16, 14, 20, 31], // Datos de los km recorridos en cada día
     borderColor: 'rgba(153, 102, 255, 1)',
     fill: true,
     tension: 0.1
@@ -54,7 +54,7 @@ const myChartLine1 = new Chart(document.getElementById('myChart-line-1'), {
 
 function actualizarDiasRestantes() {
   // Fecha objetivo fija
-  const objetivoDate = new Date('2026-09-27');
+  const objetivoDate = new Date('2025-10-11');
   const currentDate = new Date();
   const timeDiff = objetivoDate - currentDate;
   const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
